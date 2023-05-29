@@ -196,6 +196,12 @@ npx eslint .
 - 👤 Twitter: [@MAnwarHussaini](https://twitter.com/MAnwarHussaini)
 - 👤 LinkedIn: [Mohammad Anwar Hussaini](https://www.linkedin.com/in/mohammad-anwar-hussaini-876638267/)
 
+👤 **Andrea Manuel**
+
+- GitHub: [@AndreaM2429](https://github.com/AndreaM2429)
+- Twitter: [@twitter](https://twitter.com/AndreaManuelOr1)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/andrea-manuel-2b075026a/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
