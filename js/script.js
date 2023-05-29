@@ -69,8 +69,7 @@ function removeBook(event) {
             allBooks.splice(index, 1);
             const child = document.getElementById(elem[0]);
             console.log(child)
-            const bookConten = document.getElementById(elem[0])
-            bookConten.removeChild(child);
+            bookContainer.removeChild(child);
         }
     })
 }
