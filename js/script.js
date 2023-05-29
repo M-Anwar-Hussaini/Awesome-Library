@@ -29,11 +29,12 @@ function addBook(bookTitle, bookAuthor) {
 // Show all the book from the local storage
 function showAllBooks() {
   bookContainer.innerHTML = '';
-  if(allBooks === null){
+  if (allBooks === null) {
     return;
   }
   allBooks.forEach((item) => {
     const book = document.createElement('div');
+    // eslint-disable-next-line prefer-destructuring
     book.id = item[0];
     book.innerHTML = `
     <div
@@ -58,18 +59,24 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   addBook(bookTitle.value, bookAuthor.value);
   showAllBooks();
+  bookAuthor.value = '';
+  bookTitle.value = '';
 });
 
-//Remove book
-function removeBook(event) {
-    const botdelete = event.target.dataset.booktitle;
-    allBooks.forEach((elem) => {
-        if(elem[0] === botdelete){
-            const index = allBooks.indexOf(elem);
-            allBooks.splice(index, 1);
-            const child = document.getElementById(elem[0]);
-            console.log(child)
-            bookContainer.removeChild(child);
-        }
-    })
+// Remove book
+function removeBook(event = null) {
+  const botdelete = event.target.dataset.booktitle;
+  allBooks.forEach((elem) => {
+    if (elem[0] === botdelete) {
+      const index = allBooks.indexOf(elem);
+      allBooks.splice(index, 1);
+      localStorage.setItem(storageName, JSON.stringify(allBooks));
+      const child = document.getElementById(elem[0]);
+      bookContainer.removeChild(child);
+    }
+  });
+}
+
+if (!allBooks) {
+  removeBook();
 }
