@@ -10,8 +10,52 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <h1>Awsome Book</h1>
-    <!-- Local JS files -->
+    <header class="header">
+      <div class="container bg-light p-3">
+        <div class="row bg-success">
+          <button class="col-6 p-2 btn btn-primary">Awesome Books</button>
+          <button class="col-2 btn-info btn">List</button>
+          <button class="col-2 btn btn-info">Add new</button>
+          <button class="col-2 btn btn-info">Contacts</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container bg-light p-3">
+        <h1 class="h1 text-warning text-center mt-3">All Awesome Books</h1>
+        <!-- Container of all books -->
+        <div class="container container--book">
+
+          <!-- Book 01 -->
+          <div class="book">
+            <div
+              class="row mt-2 justify-content-between align-items-center p-2 border border-success"
+            >
+              <p class="book-title col-9 fs-5">Java by Danial liagn</p>
+              <button class="btn btn-danger col-3 btn--remove-book">Remove</button>
+            </div>
+          </div>
+          <!-- Book 01 -->
+          <div class="book">
+            <div
+              class="row mt-2 justify-content-between align-items-center p-2 border border-success"
+            >
+              <p class="book-title col-9 fs-5">Java by Danial liagn</p>
+              <button class="btn btn-danger col-3 btn--remove-book">Remove</button>
+            </div>
+          </div>
+          <!-- Book 01 -->
+          <div class="book">
+            <div
+              class="row mt-2 justify-content-between align-items-center p-2 border border-success"
+            >
+              <p class="book-title col-9 fs-5">Java by Danial liagn</p>
+              <button class="btn btn-danger col-3 btn--remove-book">Remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
   </body>
