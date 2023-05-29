@@ -29,8 +29,12 @@ function addBook(bookTitle, bookAuthor) {
 // Show all the book from the local storage
 function showAllBooks() {
   bookContainer.innerHTML = '';
+  if(allBooks === null){
+    return;
+  }
   allBooks.forEach((item) => {
     const book = document.createElement('div');
+    book.id = item[0];
     book.innerHTML = `
     <div
       class="row mt-2 justify-content-between align-items-center p-2 border border-success"
@@ -38,7 +42,7 @@ function showAllBooks() {
       <p class="book-title col-9 fs-5">
         ${item[0]} by ${item[1]}
       </p>
-      <button class="btn btn-danger col-3 btn--remove-book" onclick="">
+      <button class="btn btn-danger col-3 btn--remove-book" data-booktitle="${item[0]}" onclick="removeBook(event)">
         Remove
       </button>
     </div>
@@ -55,3 +59,18 @@ form.addEventListener('submit', (e) => {
   addBook(bookTitle.value, bookAuthor.value);
   showAllBooks();
 });
+
+//Remove book
+function removeBook(event) {
+    const botdelete = event.target.dataset.booktitle;
+    allBooks.forEach((elem) => {
+        if(elem[0] === botdelete){
+            const index = allBooks.indexOf(elem);
+            allBooks.splice(index, 1);
+            const child = document.getElementById(elem[0]);
+            console.log(child)
+            const bookConten = document.getElementById(elem[0])
+            bookConten.removeChild(child);
+        }
+    })
+}
