@@ -36,17 +36,16 @@ function showAllBooks() {
     const book = document.createElement('div');
     // eslint-disable-next-line prefer-destructuring
     book.id = item[0];
-    book.innerHTML = `
-    <div
-      class="row mt-2 justify-content-between align-items-center p-2 border border-success"
-    >
-      <p class="book-title col-9 fs-5">
-        ${item[0]} by ${item[1]}
-      </p>
-      <button class="btn btn-danger col-3 btn--remove-book" data-booktitle="${item[0]}" onclick="removeBook(event)">
-        Remove
-      </button>
-    </div>
+    book.className = 'row border border-success-subtle rounded-2 align-items-center p-2 mt-2';
+    book.innerHTML = `    
+      <div class="col col-12 col-md-8 mb-3 mb-md-0 text-center text-md-start">
+        <p class="book-title mb-0">
+          <strong>${item[0]}</strong> by <strong>${item[1]}</strong>
+        </p>
+      </div>
+      <div class="col col-12 col-md-4">
+        <button class="btn btn-danger w-100" data-booktitle="${item[0]}" onclick="removeBook(event)">Remove</button>
+      </div>
   `;
     bookContainer.append(book);
   });

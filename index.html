@@ -9,57 +9,63 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
-    <header class="header mt-md-2 mt-lg-4">
-      <div class="container bg-primary p-3">
-        <h1 class="h1 text-center text-light fs-1">Awsome books</h1>
-      </div>
+  <body class="p-0 p-sm-1 p-sm-1 p-md-2 p-lg-3">
+    <header class="header container bg-primary p-3">
+      <h1 class="h1 text-center text-light fs-1">Awsome Books</h1>
     </header>
     <main>
-      <form class="container">
-        <div class="row border border-success p-2 mt-2">
-          <input
-            required
-            type="text"
-            id="book-title"
-            placeholder="Book title"
-            class="col-12 col-md-5 col-lg-4 border border-success rounded-1 mb-2 mb-lg-0"
-          />
-          <input
-            type="text"
-            required
-            id="book-author"
-            placeholder="Book Author"
-            class="col-12 col-md-5 ms-md-auto col-lg-4 border border-success rounded-1 mb-2 mb-lg-0"
-          />
-          <button
-            id="add-book"
-            class="col-12 col-lg-3 ms-lg-auto btn btn-success"
-          >
-            Add
-          </button>
-        </div>
-      </form>
-      <!-- All books -->
-      <div class="container bg-secondary-subtle mt-3 p-3">
-        <h1 class="h1 text-secondary-emphasis text-center mt-3">
-          All Awesome Books
-        </h1>
+      <section class="container pt-3 pb-3 bg-primary-subtle">
+        <form>
+          <h4 class="h4">Add a new book:</h4>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2">
+            <div class="col">
+              <input
+                required
+                type="text"
+                id="book-title"
+                placeholder="Book Title"
+                class="form-control"
+              />
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                required
+                id="book-author"
+                placeholder="Book Author"
+                class="form-control"
+              />
+            </div>
+            <div class="col col-sm-12 col-md-4">
+              <button id="add-book" class="btn btn-success w-100">Add</button>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <!------------------->
+      <!-- SECTION BOOK LIST -->
+      <!------------------->
+      <section class="container bg-secondary-subtle p-3">
+        <h2 class="h4">List of all books</h2>
+
         <!-- Container of all books -->
         <div class="container container--book">
-          <div
-            class="row mt-2 justify-content-between align-items-center p-2 border border-success"
-          >
-            <p class="book-title col-9 fs-5">
-              ${bookTitle.value} by ${bookAuthor.value}
-            </p>
-            <button class="btn btn-danger col-3 btn--remove-book" onclick="">
-              Remove
-            </button>
+          <!--
+          <div class="row border border-success-subtle rounded-2 align-items-center p-2 fs-5 mt-2">
+            <div class="col col-12 col-md-8 mb-3 mb-md-0 text-center text-md-start">
+              <p class="book-title mb-0">
+                <strong>Book</strong> by <strong>Author</strong>
+              </p>
+            </div>
+            <div class="col col-12 col-md-4">
+              <button class="btn btn-danger w-100 fs-5">Remove</button>
+            </div>
           </div>
+          -->
         </div>
-      </div>
+      </section>
     </main>
-    <script src="./js/script.js"></script>
+    <script src="./js/classes.js"></script>
   </body>
 </html>
