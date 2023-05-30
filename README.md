@@ -36,7 +36,7 @@
 
 # 📖 [Awesome Library] <a name="about-project"></a>
 
-**[Awesome Library]** is my first Capstone project that mimics a real-world project.
+**[Awesome Library]** is the project to save the data of every book in local storage of browser using JS.
 
 ## 🛠 Built With <a name="built-with"></a>
 
