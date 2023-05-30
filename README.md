@@ -2,7 +2,6 @@
 
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="imgs/genius-academy.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Awesome Library</b></h3>
@@ -90,9 +89,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-<!-- - ✅ You can see the live demo of this webpage by clicking [here](); -->
-
-<!-- - [Live Demo Link](https://google.com) -->
+- ✅ You can see the live demo of this webpage by clicking [here](https://m-anwar-hussaini.github.io/Awesome-Library/);
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -256,6 +253,6 @@ If you like this project, kindly drop a start for the [repository](https://githu
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](MIT.md) licensed.
+This project is [MIT](LICENSE)) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
