@@ -12,21 +12,49 @@
   <body class="p-0 p-sm-1 p-sm-1 p-md-2 p-lg-3">
     <header class="header container bg-primary p-3">
       <h1 class="h1 text-center text-light fs-1">Awsome Books</h1>
-      
+
       <!-- -------------- -->
       <!-- Navigation Bar -->
       <!-- -------------- -->
       <div class="container">
-        <div class="row row-cols-1 g-2 row-cols-md-4 bg-danger-subtle align-items-center p-3">
-          <div class="col-12 col-md-6"><p class="mb-0 fs-4 align-self-center">Awsome Book</p></div>
-          <div class="col-12 col-md-2"><button onclick="showSection(event, 'booklist')" class="btn btn-light w-100">Book List</button></div>
-          <div class="col-12 col-md-2"><button onclick="showSection(event, 'addbook')" class="btn btn-light w-100">Add New Book</button></div>
-          <div class="col-12 col-md-2"><button onclick="showSection(event, 'contact')" class="btn btn-light w-100">Contact Information</button></div>
+        <div
+          class="row row-cols-1 g-2 row-cols-md-4 bg-danger-subtle align-items-center p-3"
+        >
+          <div class="col-12 col-md-6">
+            <p class="mb-0 fs-4 align-self-center">Awsome Book</p>
+          </div>
+          <div class="col-12 col-md-2">
+            <button
+              onclick="showSection(event, 'booklist')"
+              class="btn btn-light w-100 btn--nav"
+            >
+              List
+            </button>
+          </div>
+          <div class="col-12 col-md-2">
+            <button
+              onclick="showSection(event, 'addbook')"
+              class="btn btn-light w-100 btn--nav"
+            >
+              Add New
+            </button>
+          </div>
+          <div class="col-12 col-md-2">
+            <button
+              onclick="showSection(event, 'contact')"
+              class="btn btn-light w-100 btn--nav"
+            >
+              Contact
+            </button>
+          </div>
         </div>
       </div>
     </header>
     <main>
-      <section id="addbook" class="container pt-3 pb-3 bg-primary-subtle d-none">
+      <section
+        id="addbook"
+        class="container pt-3 pb-3 bg-primary-subtle d-none"
+      >
         <form>
           <h4 class="h4">Add a new book:</h4>
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2">
@@ -63,8 +91,7 @@
 
         <!-- Container of all books -->
         <!-- The content of this section will be added by JavaScript -->
-        <div class="container container--book">
-        </div>
+        <div class="container container--book"></div>
       </section>
 
       <!----------------------->
@@ -73,11 +100,16 @@
       <section id="contact" class="d-none">
         <div class="container pt-3 pb-3 bg-secondary-subtle text-center">
           <h2>Contact Information</h2>
-          <p>Do you have any questions or you just want to say hello? you can reach out to us!</p>
-          <ul>
-            <li><strong>Our Eamil: </strong> anwarhussaini160@gmail.com</li>
-            <li><strong>Our Phone number: </strong> +93 76 459 7266</li>
-            <li><strong>Our Address: </strong> SteetName: 22, 8453 city, Japane</li>
+          <p>
+            Do you have any questions or you just want to say hello? you can
+            reach out to us!
+          </p>
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Our Eamil: </strong> anwarhussaini160@gmail.com</li>
+            <li class="list-group-item"><strong>Our Phone number: </strong> +93 76 459 7266</li>
+            <li class="list-group-item">
+              <strong>Our Address: </strong> Nakamise-dori: 22, 8453 Tokyo, Japane
+            </li>
           </ul>
         </div>
       </section>

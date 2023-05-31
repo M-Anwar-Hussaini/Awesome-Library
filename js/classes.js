@@ -82,15 +82,16 @@ form.addEventListener('submit', (e) => {
   bookTitle.value = '';
 });
 
-//Display sections
-function showSection(event, name){
-  const section = document.querySelectorAll('section')
-  for(let i = 0; i < section.length; i += 1){
-    const id = section[i].id;
-    if(id === name){
+// Display sections
+// eslint-disable-next-line no-unused-vars
+function showSection(event, name) {
+  const section = document.querySelectorAll('section');
+  for (let i = 0; i < section.length; i += 1) {
+    const { id } = section[i];
+    if (id === name) {
       section[i].classList.remove('d-none');
-    }else{
-      section[i].classList.add('d-none')
+    } else {
+      section[i].classList.add('d-none');
     }
   }
 }
