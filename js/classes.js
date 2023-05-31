@@ -96,22 +96,22 @@ function showSection(name) {
   }
 }
 const buttons = document.querySelectorAll('.btn--nav');
-for(let i = 0; i < buttons.length; i += 1){
+for (let i = 0; i < buttons.length; i += 1) {
   buttons[i].addEventListener('click', () => {
     showSection(buttons[i].title);
-    for(let j = 0; j < buttons.length; j +=1){
-      if(i === j){
+    for (let j = 0; j < buttons.length; j += 1) {
+      if (i === j) {
         buttons[j].classList.add('btn-success');
         buttons[j].classList.remove('btn-light');
-      }else{
+      } else {
         buttons[j].classList.remove('btn-success');
         buttons[j].classList.add('btn-light');
       }
     }
-  })
+  });
 }
 
-//Set date
+// Show the date on the top of main part
 const date = document.getElementById('now');
 const newdate = new Date();
 date.textContent = newdate.toDateString();
