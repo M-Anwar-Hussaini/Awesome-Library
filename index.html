@@ -12,6 +12,18 @@
   <body class="p-0 p-sm-1 p-sm-1 p-md-2 p-lg-3">
     <header class="header container bg-primary p-3">
       <h1 class="h1 text-center text-light fs-1">Awsome Books</h1>
+      
+      <!-- -------------- -->
+      <!-- Navigation Bar -->
+      <!-- -------------- -->
+      <div class="container">
+        <div class="row row-cols-1 g-2 row-cols-md-4 bg-danger-subtle align-items-center p-3">
+          <div class="col-12 col-md-6"><p class="mb-0 fs-4 align-self-center">Awsome Book</p></div>
+          <div class="col-12 col-md-2"><button class="btn btn-light w-100">List</button></div>
+          <div class="col-12 col-md-2"><button class="btn btn-light w-100">Add New</button></div>
+          <div class="col-12 col-md-2"><button class="btn btn-light w-100">Contact</button></div>
+        </div>
+      </div>
     </header>
     <main>
       <section class="container pt-3 pb-3 bg-primary-subtle">
@@ -43,26 +55,30 @@
         </form>
       </section>
 
-      <!------------------->
+      <!----------------------->
       <!-- SECTION BOOK LIST -->
-      <!------------------->
+      <!----------------------->
       <section class="container bg-secondary-subtle p-3">
         <h2 class="h4">List of all books</h2>
 
         <!-- Container of all books -->
+        <!-- The content of this section will be added by JavaScript -->
         <div class="container container--book">
-          <!--
-          <div class="row border border-success-subtle rounded-2 align-items-center p-2 fs-5 mt-2">
-            <div class="col col-12 col-md-8 mb-3 mb-md-0 text-center text-md-start">
-              <p class="book-title mb-0">
-                <strong>Book</strong> by <strong>Author</strong>
-              </p>
-            </div>
-            <div class="col col-12 col-md-4">
-              <button class="btn btn-danger w-100 fs-5">Remove</button>
-            </div>
-          </div>
-          -->
+        </div>
+      </section>
+
+      <!----------------------->
+      <!-- SECTION CONTACCT -->
+      <!----------------------->
+      <section>
+        <div class="container pt-3 pb-3 bg-secondary-subtle text-center">
+          <h2>Contact Information</h2>
+          <p>Do you have any questions or you just want to say hello? you can reach out to us!</p>
+          <ul>
+            <li><strong>Our Eamil: </strong> anwarhussaini160@gmail.com</li>
+            <li><strong>Our Phone number: </strong> +93 76 459 7266</li>
+            <li><strong>Our Address: </strong> SteetName: 22, 8453 city, Japane</li>
+          </ul>
         </div>
       </section>
     </main>
