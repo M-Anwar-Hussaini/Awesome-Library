@@ -81,3 +81,37 @@ form.addEventListener('submit', (e) => {
   bookAuthor.value = '';
   bookTitle.value = '';
 });
+
+// Display sections
+// eslint-disable-next-line no-unused-vars
+function showSection(name) {
+  const section = document.querySelectorAll('section');
+  for (let i = 0; i < section.length; i += 1) {
+    const { id } = section[i];
+    if (id === name) {
+      section[i].classList.remove('d-none');
+    } else {
+      section[i].classList.add('d-none');
+    }
+  }
+}
+const buttons = document.querySelectorAll('.btn--nav');
+for (let i = 0; i < buttons.length; i += 1) {
+  buttons[i].addEventListener('click', () => {
+    showSection(buttons[i].title);
+    for (let j = 0; j < buttons.length; j += 1) {
+      if (i === j) {
+        buttons[j].classList.add('btn-success');
+        buttons[j].classList.remove('btn-light');
+      } else {
+        buttons[j].classList.remove('btn-success');
+        buttons[j].classList.add('btn-light');
+      }
+    }
+  });
+}
+
+// Show the date on the top of main part
+const date = document.getElementById('now');
+const newdate = new Date();
+date.textContent = newdate.toDateString();
