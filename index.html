@@ -19,14 +19,14 @@
       <div class="container">
         <div class="row row-cols-1 g-2 row-cols-md-4 bg-danger-subtle align-items-center p-3">
           <div class="col-12 col-md-6"><p class="mb-0 fs-4 align-self-center">Awsome Book</p></div>
-          <div class="col-12 col-md-2"><button class="btn btn-light w-100">List</button></div>
-          <div class="col-12 col-md-2"><button class="btn btn-light w-100">Add New</button></div>
-          <div class="col-12 col-md-2"><button class="btn btn-light w-100">Contact</button></div>
+          <div class="col-12 col-md-2"><button onclick="showSection(event, 'booklist')" class="btn btn-light w-100">Book List</button></div>
+          <div class="col-12 col-md-2"><button onclick="showSection(event, 'addbook')" class="btn btn-light w-100">Add New Book</button></div>
+          <div class="col-12 col-md-2"><button onclick="showSection(event, 'contact')" class="btn btn-light w-100">Contact Information</button></div>
         </div>
       </div>
     </header>
     <main>
-      <section class="container pt-3 pb-3 bg-primary-subtle">
+      <section id="addbook" class="container pt-3 pb-3 bg-primary-subtle d-none">
         <form>
           <h4 class="h4">Add a new book:</h4>
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2">
@@ -58,7 +58,7 @@
       <!----------------------->
       <!-- SECTION BOOK LIST -->
       <!----------------------->
-      <section class="container bg-secondary-subtle p-3">
+      <section id="booklist" class="container bg-secondary-subtle p-3">
         <h2 class="h4">List of all books</h2>
 
         <!-- Container of all books -->
@@ -70,7 +70,7 @@
       <!----------------------->
       <!-- SECTION CONTACCT -->
       <!----------------------->
-      <section>
+      <section id="contact" class="d-none">
         <div class="container pt-3 pb-3 bg-secondary-subtle text-center">
           <h2>Contact Information</h2>
           <p>Do you have any questions or you just want to say hello? you can reach out to us!</p>
