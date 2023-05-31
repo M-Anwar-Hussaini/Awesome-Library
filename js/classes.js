@@ -81,3 +81,16 @@ form.addEventListener('submit', (e) => {
   bookAuthor.value = '';
   bookTitle.value = '';
 });
+
+//Display sections
+function showSection(event, name){
+  const section = document.querySelectorAll('section')
+  for(let i = 0; i < section.length; i += 1){
+    const id = section[i].id;
+    if(id === name){
+      section[i].classList.remove('d-none');
+    }else{
+      section[i].classList.add('d-none')
+    }
+  }
+}
