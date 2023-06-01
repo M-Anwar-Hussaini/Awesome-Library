@@ -52,7 +52,7 @@ showAllBooks();
 
 // If we don't have a local stroage
 if (!localStorage.getItem(libraryBooks.storageName)) {
-  localStorage.setItem(libraryBooks.storageName, null);
+  localStorage.setItem(libraryBooks.storageName, '[]');
 }
 
 if (localStorage.getItem(libraryBooks.storageName)) {
@@ -76,6 +76,9 @@ if (!form) {
 // When the add button is clicked the info will be saved to the localStroage.
 form.addEventListener('submit', (e) => {
   e.preventDefault();
+  if (libraryBooks.allbooks === null) {
+    libraryBooks.allbooks = [];
+  }
   libraryBooks.addBook(bookTitle.value, bookAuthor.value);
   showAllBooks();
   bookAuthor.value = '';
