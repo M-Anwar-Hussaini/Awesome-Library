@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body class="p-0 p-sm-1 p-sm-1 p-md-2 p-lg-3">
+  <body class="p-0 p-sm-1 p-md-2 p-lg-3 min-vh-100 d-flex flex-column bg-secondary-subtle">
     <header class="header container bg-primary p-3">
       <h1 class="h1 text-center text-light fs-1">Awsome Books</h1>
 
@@ -17,26 +17,18 @@
       <!-- Navigation Bar -->
       <!-- -------------- -->
       <div class="container">
-        <div
-          class="row row-cols-1 g-2 row-cols-sm-3 bg-danger-subtle align-items-center p-3"
-        >
+        <div class="row row-cols-1 g-2 row-cols-sm-3 bg-danger-subtle align-items-center p-3">
           <div class="col-12 d-none d-md-block col-md-6">
             <p class="mb-0 fs-4 align-self-center">Awsome Book</p>
           </div>
           <div class="col-12 col-md-2">
-            <button title="booklist" class="btn btn-success w-100 btn--nav">
-              List
-            </button>
+            <button title="booklist" class="btn btn-success w-100 btn--nav">List</button>
           </div>
           <div class="col-12 col-md-2">
-            <button title="addbook" class="btn btn-light w-100 btn--nav">
-              Add New
-            </button>
+            <button title="addbook" class="btn btn-light w-100 btn--nav">Add New</button>
           </div>
           <div class="col-12 col-md-2">
-            <button title="contact" class="btn btn-light w-100 btn--nav">
-              Contact
-            </button>
+            <button title="contact" class="btn btn-light w-100 btn--nav">Contact</button>
           </div>
         </div>
       </div>
@@ -57,33 +49,16 @@
       <!----------------------->
       <!-- SECTION  ADD BOOK -->
       <!----------------------->
-      <section
-        id="addbook"
-        class="container p-5  align-items-end d-none"
-      >
+      <section id="addbook" class="container p-5 align-items-end d-none">
         <form class="row">
           <h4 class="h4 text-center mb-3 col-12">Add a new book:</h4>
           <div class="d-none d-md-block col-2"></div>
           <div class="col d-flex flex-column gap-3 align-items-center">
-            <input
-              required
-              type="text"
-              id="book-title"
-              placeholder="Book Title"
-              class="form-control"
-            />
+            <input required type="text" id="book-title" placeholder="Book Title" class="form-control" />
 
-            <input
-              type="text"
-              required
-              id="book-author"
-              placeholder="Book Author"
-              class="form-control"
-            />
+            <input type="text" required id="book-author" placeholder="Book Author" class="form-control" />
 
-            <button id="add-book" class="btn btn-success align-self-end w-50">
-              Add
-            </button>
+            <button id="add-book" class="btn btn-success align-self-end w-50">Add</button>
           </div>
           <div class="d-none d-md-block col-2"></div>
         </form>
@@ -95,26 +70,16 @@
       <section id="contact" class="d-none">
         <div class="container pt-3 pb-3 bg-secondary-subtle text-center">
           <h2>Contact Information</h2>
-          <p>
-            Do you have any questions or you just want to say hello? you can
-            reach out to us!
-          </p>
+          <p>Do you have any questions or you just want to say hello? you can reach out to us!</p>
           <ul class="list-group">
-            <li class="list-group-item">
-              <strong>Our Eamil: </strong> anwarhussaini160@gmail.com
-            </li>
-            <li class="list-group-item">
-              <strong>Our Phone number: </strong> +93 76 459 7266
-            </li>
-            <li class="list-group-item">
-              <strong>Our Address: </strong> Nakamise-dori: 22, 8453 Tokyo,
-              Japane
-            </li>
+            <li class="list-group-item"><strong>Our Eamil: </strong> anwarhussaini160@gmail.com</li>
+            <li class="list-group-item"><strong>Our Phone number: </strong> +93 76 459 7266</li>
+            <li class="list-group-item"><strong>Our Address: </strong> Dasht-e-Barchi: 14, 24 Kabul, Afghanistan</li>
           </ul>
         </div>
       </section>
     </main>
-    <footer class="container bg-secondary-subtle p-2"><p class="container">All rights resereved.</p></footer>
-    <script src="./js/classes.js"></script>
+    <footer class="container p-2 mt-auto border-top border-secondary border-3"><p class="container">All rights resereved.</p></footer>
+    <script src="./js/main.js"></script>
   </body>
 </html>
