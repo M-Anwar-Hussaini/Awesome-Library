@@ -1,7 +1,7 @@
-class Store {
+export default class Library {
   static init() {
-    const store = new Store();
-    return store;
+    const library = new Library();
+    return library;
   }
 
   constructor() {
@@ -14,10 +14,9 @@ class Store {
     this.stroageName = 'library';
     this.loadBook();
     this.diplayBooks();
-    this.configNavItems();
   }
 
-  addBook() {
+  addBook = () => {
     const bookTitle = document.querySelector('#book-title');
     const bookAuthor = document.querySelector('#book-author');
 
@@ -32,9 +31,9 @@ class Store {
 
     bookTitle.value = '';
     bookAuthor.value = '';
-  }
+  };
 
-  diplayBooks() {
+  diplayBooks = () => {
     const bookContainer = document.querySelector('.container--book');
     bookContainer.innerHTML = '';
     this.bookList.forEach((eachBook, index) => {
@@ -71,51 +70,23 @@ class Store {
 
       bookContainer.appendChild(book);
     });
-  }
+  };
 
-  removeBook(index) {
+  removeBook = (index) => {
     this.bookList.splice(index, 1);
     this.saveBook();
     this.loadBook();
-  }
+  };
 
-  loadBook() {
+  loadBook = () => {
     const localStorageBooks = localStorage.getItem(this.stroageName);
     if (localStorageBooks) {
       this.bookList = JSON.parse(localStorageBooks);
       this.diplayBooks();
     }
-  }
+  };
 
-  saveBook() {
+  saveBook = () => {
     localStorage.setItem(this.stroageName, JSON.stringify(this.bookList));
-  }
-
-  // eslint-disable-next-line class-methods-use-this
-  configNavItems() {
-    const sections = document.querySelectorAll('section');
-    const navItems = document.querySelectorAll('.btn--nav');
-
-    navItems.forEach((curBtn, index) => {
-      curBtn.addEventListener('click', () => {
-        for (let i = 0; i < sections.length; i += 1) {
-          if (i === index) {
-            sections[i].classList.remove('d-none');
-            navItems[i].classList.add('btn-success');
-            navItems[i].classList.remove('btn-light');
-          } else {
-            sections[i].classList.add('d-none');
-            navItems[i].classList.remove('btn-success');
-            navItems[i].classList.add('btn-light');
-          }
-        }
-      });
-    });
-  }
+  };
 }
-
-Store.init();
-
-const nowEl = document.getElementById('now');
-const nowDate = new Date();
-nowEl.textContent = nowDate;
